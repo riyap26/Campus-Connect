@@ -1,0 +1,66 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="edu.gatech.campusconnect"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+8-->/Users/emmaringe/Desktop/GitHub.nosync/campus-connect/app/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="32" />
+9-->/Users/emmaringe/Desktop/GitHub.nosync/campus-connect/app/src/main/AndroidManifest.xml
+10
+11    <application
+11-->/Users/emmaringe/Desktop/GitHub.nosync/campus-connect/app/src/main/AndroidManifest.xml:6:5-31:19
+12        android:allowBackup="true"
+12-->/Users/emmaringe/Desktop/GitHub.nosync/campus-connect/app/src/main/AndroidManifest.xml:7:9-35
+13        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+13-->[androidx.core:core:1.5.0] /Users/emmaringe/.gradle/caches/transforms-3/09dce287f966ede6f56d2bc091f83727/transformed/core-1.5.0/AndroidManifest.xml:24:18-86
+14        android:dataExtractionRules="@xml/data_extraction_rules"
+14-->/Users/emmaringe/Desktop/GitHub.nosync/campus-connect/app/src/main/AndroidManifest.xml:8:9-65
+15        android:debuggable="true"
+16        android:fullBackupContent="@xml/backup_rules"
+16-->/Users/emmaringe/Desktop/GitHub.nosync/campus-connect/app/src/main/AndroidManifest.xml:9:9-54
+17        android:icon="@mipmap/ic_launcher"
+17-->/Users/emmaringe/Desktop/GitHub.nosync/campus-connect/app/src/main/AndroidManifest.xml:10:9-43
+18        android:label="@string/app_name"
+18-->/Users/emmaringe/Desktop/GitHub.nosync/campus-connect/app/src/main/AndroidManifest.xml:11:9-41
+19        android:roundIcon="@mipmap/ic_launcher_round"
+19-->/Users/emmaringe/Desktop/GitHub.nosync/campus-connect/app/src/main/AndroidManifest.xml:12:9-54
+20        android:supportsRtl="true"
+20-->/Users/emmaringe/Desktop/GitHub.nosync/campus-connect/app/src/main/AndroidManifest.xml:13:9-35
+21        android:testOnly="true"
+22        android:theme="@style/Theme.CampusConnect" >
+22-->/Users/emmaringe/Desktop/GitHub.nosync/campus-connect/app/src/main/AndroidManifest.xml:14:9-51
+23        <activity
+23-->/Users/emmaringe/Desktop/GitHub.nosync/campus-connect/app/src/main/AndroidManifest.xml:16:9-19:64
+24            android:name="edu.gatech.campusconnect.activities.dashboard.DashboardActivity"
+24-->/Users/emmaringe/Desktop/GitHub.nosync/campus-connect/app/src/main/AndroidManifest.xml:17:13-67
+25            android:exported="false"
+25-->/Users/emmaringe/Desktop/GitHub.nosync/campus-connect/app/src/main/AndroidManifest.xml:18:13-37
+26            android:label="@string/title_activity_dashboard" />
+26-->/Users/emmaringe/Desktop/GitHub.nosync/campus-connect/app/src/main/AndroidManifest.xml:19:13-61
+27        <activity
+27-->/Users/emmaringe/Desktop/GitHub.nosync/campus-connect/app/src/main/AndroidManifest.xml:20:9-30:20
+28            android:name="edu.gatech.campusconnect.activities.auth.MainActivity"
+28-->/Users/emmaringe/Desktop/GitHub.nosync/campus-connect/app/src/main/AndroidManifest.xml:21:13-57
+29            android:exported="true"
+29-->/Users/emmaringe/Desktop/GitHub.nosync/campus-connect/app/src/main/AndroidManifest.xml:22:13-36
+30            android:label="@string/app_name"
+30-->/Users/emmaringe/Desktop/GitHub.nosync/campus-connect/app/src/main/AndroidManifest.xml:23:13-45
+31            android:theme="@style/Theme.CampusConnect.NoActionBar" >
+31-->/Users/emmaringe/Desktop/GitHub.nosync/campus-connect/app/src/main/AndroidManifest.xml:24:13-67
+32            <intent-filter>
+32-->/Users/emmaringe/Desktop/GitHub.nosync/campus-connect/app/src/main/AndroidManifest.xml:25:13-29:29
+33                <action android:name="android.intent.action.MAIN" />
+33-->/Users/emmaringe/Desktop/GitHub.nosync/campus-connect/app/src/main/AndroidManifest.xml:26:17-69
+33-->/Users/emmaringe/Desktop/GitHub.nosync/campus-connect/app/src/main/AndroidManifest.xml:26:25-66
+34
+35                <category android:name="android.intent.category.LAUNCHER" />
+35-->/Users/emmaringe/Desktop/GitHub.nosync/campus-connect/app/src/main/AndroidManifest.xml:28:17-77
+35-->/Users/emmaringe/Desktop/GitHub.nosync/campus-connect/app/src/main/AndroidManifest.xml:28:27-74
+36            </intent-filter>
+37        </activity>
+38    </application>
+39
+40</manifest>
