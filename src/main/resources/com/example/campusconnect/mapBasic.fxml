@@ -1,0 +1,743 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="800.0" style="-fx-background-color: #FFFFFF #FFFFFF;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.campusconnect.MapBasic">
+   <children>
+      <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="570.0" prefWidth="800.0">
+         <top>
+            <HBox prefHeight="64.0" prefWidth="600.0" style="-fx-background-color: #7E54D9;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label alignment="CENTER" prefHeight="64.0" prefWidth="306.0" text="Campus Connect" textFill="WHITE">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+                  <Button id="logOutButton" mnemonicParsing="false" onMouseClicked="#handleBack" style="-fx-background-color: #7E54D9 #7E54D9;" text="Event Home" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="300.0" top="25.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button id="logOutButton" mnemonicParsing="false" style="-fx-background-color: #7E54D9 #7E54D9;" text="Log Out" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="20.0" top="25.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </top>
+         <center>
+            <VBox maxWidth="-Infinity" prefHeight="435.0" prefWidth="630.0">
+               <children>
+                  <HBox maxWidth="-Infinity" prefHeight="26.0" prefWidth="622.0">
+                     <children>
+                        <Label text="Event Selected:">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Text fx:id="curr" strokeType="OUTSIDE" strokeWidth="0.0" text="None" wrappingWidth="432.86501121520996">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Text>
+                     </children>
+                  </HBox>
+                  <HBox maxWidth="-Infinity" prefHeight="402.0" prefWidth="694.0">
+                     <children>
+                        <ImageView fitHeight="402.0" fitWidth="650.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@ccmap.png" />
+                           </image>
+                        </ImageView>
+
+                        <Hyperlink fx:id="CRC1" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" onMouseClicked="#handleView" onMouseEntered="#handleOver" onMouseExited="#handleOut" prefHeight="34.0" prefWidth="27.0" text="📌" textFill="RED" HBox.hgrow="ALWAYS">
+                           <HBox.margin>
+                              <Insets left="-630.0" top="140.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Copperplate" size="36.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <padding>
+                              <Insets right="-20.0" top="-5.0" />
+                           </padding>
+                        </Hyperlink>
+                        <Hyperlink fx:id="CRC2" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" onMouseClicked="#handleView" onMouseEntered="#handleOver" onMouseExited="#handleOut" prefHeight="34.0" prefWidth="26.0" text="📌" textFill="RED">
+                           <font>
+                              <Font name="Copperplate" size="36.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <HBox.margin>
+                              <Insets top="150.0" />
+                           </HBox.margin>
+                           <padding>
+                              <Insets right="-20.0" top="-5.0" />
+                           </padding>
+                        </Hyperlink>
+                        <Hyperlink fx:id="CRC3" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" onMouseClicked="#handleView" onMouseEntered="#handleOver" onMouseExited="#handleOut" prefHeight="34.0" prefWidth="24.0" text="📌" textFill="RED">
+                           <font>
+                              <Font name="Copperplate" size="36.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <HBox.margin>
+                              <Insets left="-5.0" top="170.0" />
+                           </HBox.margin>
+                           <padding>
+                              <Insets right="-20.0" top="-5.0" />
+                           </padding>
+                        </Hyperlink>
+                        <Hyperlink fx:id="CRC4" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" onMouseClicked="#handleView" onMouseEntered="#handleOver" onMouseExited="#handleOut" prefHeight="34.0" prefWidth="25.0" text="📌" textFill="RED">
+                           <font>
+                              <Font name="Copperplate" size="36.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <HBox.margin>
+                              <Insets left="-50.0" top="185.0" />
+                           </HBox.margin>
+                           <padding>
+                              <Insets right="-20.0" top="-5.0" />
+                           </padding>
+                        </Hyperlink>
+                        <Hyperlink fx:id="STAMPS1" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" onMouseClicked="#handleView" onMouseEntered="#handleOver" onMouseExited="#handleOut" prefHeight="34.0" prefWidth="21.0" text="📌" textFill="RED">
+                           <font>
+                              <Font name="Copperplate" size="36.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <HBox.margin>
+                              <Insets top="200.0" />
+                           </HBox.margin>
+                           <padding>
+                              <Insets right="-20.0" top="-5.0" />
+                           </padding>
+                        </Hyperlink>
+                        <Hyperlink fx:id="STAMPS2" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" onMouseClicked="#handleView" onMouseEntered="#handleOver" onMouseExited="#handleOut" prefHeight="34.0" prefWidth="23.0" text="📌" textFill="RED">
+                           <font>
+                              <Font name="Copperplate" size="36.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <HBox.margin>
+                              <Insets left="-5.0" top="210.0" />
+                           </HBox.margin>
+                           <padding>
+                              <Insets right="-20.0" top="-5.0" />
+                           </padding>
+                        </Hyperlink>
+                        <Hyperlink fx:id="ISYE1" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" onMouseClicked="#handleView" onMouseEntered="#handleOver" onMouseExited="#handleOut" prefHeight="34.0" prefWidth="22.0" text="📌" textFill="RED">
+                           <font>
+                              <Font name="Copperplate" size="36.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <HBox.margin>
+                              <Insets left="30.0" top="150.0" />
+                           </HBox.margin>
+                           <padding>
+                              <Insets right="-20.0" top="-5.0" />
+                           </padding>
+                        </Hyperlink>
+                        <Hyperlink fx:id="ISYE3" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" onMouseClicked="#handleView" onMouseEntered="#handleOver" onMouseExited="#handleOut" prefHeight="34.0" prefWidth="22.0" text="📌" textFill="RED">
+                           <font>
+                              <Font name="Copperplate" size="36.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <HBox.margin>
+                              <Insets left="-20.0" top="185.0" />
+                           </HBox.margin>
+                           <padding>
+                              <Insets right="-20.0" top="-5.0" />
+                           </padding>
+                        </Hyperlink>
+                        <Hyperlink fx:id="ISYE2" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" onMouseClicked="#handleView" onMouseEntered="#handleOver" onMouseExited="#handleOut" prefHeight="34.0" prefWidth="22.0" text="📌" textFill="RED">
+                           <font>
+                              <Font name="Copperplate" size="36.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <HBox.margin>
+                              <Insets top="175.0" />
+                           </HBox.margin>
+                           <padding>
+                              <Insets right="-20.0" top="-5.0" />
+                           </padding>
+                        </Hyperlink>
+                        <Hyperlink fx:id="EXHIBITION1" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" onMouseClicked="#handleView" onMouseEntered="#handleOver" onMouseExited="#handleOut" prefHeight="34.0" prefWidth="22.0" text="📌" textFill="RED">
+                           <font>
+                              <Font name="Copperplate" size="36.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <HBox.margin>
+                              <Insets left="-50.0" top="210.0" />
+                           </HBox.margin>
+                           <padding>
+                              <Insets right="-20.0" top="-5.0" />
+                           </padding>
+                        </Hyperlink>
+                        <Hyperlink fx:id="EXHIBITION2" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" onMouseClicked="#handleView" onMouseEntered="#handleOver" onMouseExited="#handleOut" prefHeight="34.0" prefWidth="22.0" text="📌" textFill="RED">
+                           <font>
+                              <Font name="Copperplate" size="36.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <HBox.margin>
+                              <Insets left="10.0" top="225.0" />
+                           </HBox.margin>
+                           <padding>
+                              <Insets right="-20.0" top="-5.0" />
+                           </padding>
+                        </Hyperlink>
+                        <Hyperlink fx:id="FLAG1" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" onMouseClicked="#handleView" onMouseEntered="#handleOver" onMouseExited="#handleOut" prefHeight="34.0" prefWidth="21.0" text="📌" textFill="RED">
+                           <font>
+                              <Font name="Copperplate" size="36.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <HBox.margin>
+                              <Insets left="55.0" top="225.0" />
+                           </HBox.margin>
+                           <padding>
+                              <Insets right="-20.0" top="-5.0" />
+                           </padding>
+                        </Hyperlink>
+                        <Hyperlink fx:id="FLAG2" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" onMouseClicked="#handleView" onMouseEntered="#handleOver" onMouseExited="#handleOut" prefHeight="34.0" prefWidth="20.0" text="📌" textFill="RED">
+                           <font>
+                              <Font name="Copperplate" size="36.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <HBox.margin>
+                              <Insets top="230.0" />
+                           </HBox.margin>
+                           <padding>
+                              <Insets right="-20.0" top="-5.0" />
+                           </padding>
+                        </Hyperlink>
+                        <Hyperlink fx:id="FERST1" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" onMouseClicked="#handleView" onMouseEntered="#handleOver" onMouseExited="#handleOut" prefHeight="34.0" prefWidth="23.0" text="📌" textFill="RED">
+                           <font>
+                              <Font name="Copperplate" size="36.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <HBox.margin>
+                              <Insets left="-35.0" top="180.0" />
+                           </HBox.margin>
+                           <padding>
+                              <Insets right="-20.0" top="-5.0" />
+                           </padding>
+                        </Hyperlink>
+                        <Hyperlink fx:id="FERST3" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" onMouseClicked="#handleView" onMouseEntered="#handleOver" onMouseExited="#handleOut" prefHeight="34.0" prefWidth="21.0" text="📌" textFill="RED">
+                           <font>
+                              <Font name="Copperplate" size="36.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <HBox.margin>
+                              <Insets top="175.0" />
+                           </HBox.margin>
+                           <padding>
+                              <Insets right="-20.0" top="-5.0" />
+                           </padding>
+                        </Hyperlink>
+                        <Hyperlink fx:id="FERST2" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" onMouseClicked="#handleView" onMouseEntered="#handleOver" onMouseExited="#handleOut" prefHeight="34.0" prefWidth="23.0" text="📌" textFill="RED">
+                           <font>
+                              <Font name="Copperplate" size="36.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <HBox.margin>
+                              <Insets left="-20.0" top="205.0" />
+                           </HBox.margin>
+                           <padding>
+                              <Insets right="-20.0" top="-5.0" />
+                           </padding>
+                        </Hyperlink>
+                        <Hyperlink fx:id="STUDENT1" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" onMouseClicked="#handleView" onMouseEntered="#handleOver" onMouseExited="#handleOut" prefHeight="34.0" prefWidth="23.0" text="📌" textFill="RED">
+                           <font>
+                              <Font name="Copperplate" size="36.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <HBox.margin>
+                              <Insets top="230.0" />
+                           </HBox.margin>
+                           <padding>
+                              <Insets right="-20.0" top="-5.0" />
+                           </padding>
+                        </Hyperlink>
+                        <Hyperlink fx:id="STUDENT3" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" onMouseClicked="#handleView" onMouseEntered="#handleOver" onMouseExited="#handleOut" prefHeight="34.0" prefWidth="22.0" text="📌" textFill="RED">
+                           <font>
+                              <Font name="Copperplate" size="36.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <HBox.margin>
+                              <Insets left="-20.0" top="250.0" />
+                           </HBox.margin>
+                           <padding>
+                              <Insets right="-20.0" top="-5.0" />
+                           </padding>
+                        </Hyperlink>
+                        <Hyperlink fx:id="STUDENT2" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" onMouseClicked="#handleView" onMouseEntered="#handleOver" onMouseExited="#handleOut" prefHeight="34.0" prefWidth="21.0" text="📌" textFill="RED">
+                           <font>
+                              <Font name="Copperplate" size="36.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <HBox.margin>
+                              <Insets top="270.0" />
+                           </HBox.margin>
+                           <padding>
+                              <Insets right="-20.0" top="-5.0" />
+                           </padding>
+                        </Hyperlink>
+                        <Hyperlink fx:id="COC1" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" onMouseClicked="#handleView" onMouseEntered="#handleOver" onMouseExited="#handleOut" prefHeight="34.0" prefWidth="22.0" text="📌" textFill="RED">
+                           <font>
+                              <Font name="Copperplate" size="36.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <HBox.margin>
+                              <Insets left="10.0" top="40.0" />
+                           </HBox.margin>
+                           <padding>
+                              <Insets right="-20.0" top="-5.0" />
+                           </padding>
+                        </Hyperlink>
+                        <Hyperlink fx:id="COC2" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" onMouseClicked="#handleView" onMouseEntered="#handleOver" onMouseExited="#handleOut" prefHeight="34.0" prefWidth="21.0" text="📌" textFill="RED">
+                           <font>
+                              <Font name="Copperplate" size="36.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <HBox.margin>
+                              <Insets left="-7.0" top="65.0" />
+                           </HBox.margin>
+                           <padding>
+                              <Insets right="-20.0" top="-5.0" />
+                           </padding>
+                        </Hyperlink>
+                        <Hyperlink fx:id="VANLEER1" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" onMouseClicked="#handleView" onMouseEntered="#handleOver" onMouseExited="#handleOut" prefHeight="34.0" prefWidth="23.0" text="📌" textFill="RED">
+                           <font>
+                              <Font name="Copperplate" size="36.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <HBox.margin>
+                              <Insets left="-5.0" top="130.0" />
+                           </HBox.margin>
+                           <padding>
+                              <Insets right="-20.0" top="-5.0" />
+                           </padding>
+                        </Hyperlink>
+                        <Hyperlink fx:id="VANLEER2" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" onMouseClicked="#handleView" onMouseEntered="#handleOver" onMouseExited="#handleOut" prefHeight="34.0" prefWidth="21.0" text="📌" textFill="RED">
+                           <font>
+                              <Font name="Copperplate" size="36.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <HBox.margin>
+                              <Insets left="-45.0" top="165.0" />
+                           </HBox.margin>
+                           <padding>
+                              <Insets right="-20.0" top="-5.0" />
+                           </padding>
+                        </Hyperlink>
+                        <Hyperlink fx:id="TECHGREEN1" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" onMouseClicked="#handleView" onMouseEntered="#handleOver" onMouseExited="#handleOut" prefHeight="34.0" prefWidth="19.0" text="📌" textFill="RED">
+                           <font>
+                              <Font name="Copperplate" size="36.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <HBox.margin>
+                              <Insets left="-30.0" top="190.0" />
+                           </HBox.margin>
+                           <padding>
+                              <Insets right="-20.0" top="-5.0" />
+                           </padding>
+                        </Hyperlink>
+                        <Hyperlink fx:id="TECHGREEN2" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" onMouseClicked="#handleView" onMouseEntered="#handleOver" onMouseExited="#handleOut" prefHeight="34.0" prefWidth="22.0" text="📌" textFill="RED">
+                           <font>
+                              <Font name="Copperplate" size="36.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <HBox.margin>
+                              <Insets left="5.0" top="190.0" />
+                           </HBox.margin>
+                           <padding>
+                              <Insets right="-20.0" top="-5.0" />
+                           </padding>
+                        </Hyperlink>
+                        <Hyperlink fx:id="TECHGREEN3" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" onMouseClicked="#handleView" onMouseEntered="#handleOver" onMouseExited="#handleOut" prefHeight="34.0" prefWidth="21.0" text="📌" textFill="RED">
+                           <font>
+                              <Font name="Copperplate" size="36.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <HBox.margin>
+                              <Insets left="-50.0" top="240.0" />
+                           </HBox.margin>
+                           <padding>
+                              <Insets right="-20.0" top="-5.0" />
+                           </padding>
+                        </Hyperlink>
+                        <Hyperlink fx:id="TECHGREEN4" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" onMouseClicked="#handleView" onMouseEntered="#handleOver" onMouseExited="#handleOut" prefHeight="34.0" prefWidth="23.0" text="📌" textFill="RED">
+                           <font>
+                              <Font name="Copperplate" size="36.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <HBox.margin>
+                              <Insets top="235.0" />
+                           </HBox.margin>
+                           <padding>
+                              <Insets right="-20.0" top="-5.0" />
+                           </padding>
+                        </Hyperlink>
+                        <Hyperlink fx:id="KLAUS1" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" onMouseClicked="#handleView" onMouseEntered="#handleOver" onMouseExited="#handleOut" prefHeight="34.0" prefWidth="21.0" text="📌" textFill="RED">
+                           <font>
+                              <Font name="Copperplate" size="36.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <HBox.margin>
+                              <Insets left="25.0" top="35.0" />
+                           </HBox.margin>
+                           <padding>
+                              <Insets right="-20.0" top="-5.0" />
+                           </padding>
+                        </Hyperlink>
+                        <Hyperlink fx:id="KLAUS3" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" onMouseClicked="#handleView" onMouseEntered="#handleOver" onMouseExited="#handleOut" prefHeight="34.0" prefWidth="22.0" text="📌" textFill="RED">
+                           <font>
+                              <Font name="Copperplate" size="36.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <HBox.margin>
+                              <Insets left="-5.0" top="50.0" />
+                           </HBox.margin>
+                           <padding>
+                              <Insets right="-20.0" top="-5.0" />
+                           </padding>
+                        </Hyperlink>
+                        <Hyperlink fx:id="KLAUS2" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" onMouseClicked="#handleView" onMouseEntered="#handleOver" onMouseExited="#handleOut" prefHeight="25.0" prefWidth="56.0" text="📌" textFill="RED">
+                           <font>
+                              <Font name="Copperplate" size="36.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <HBox.margin>
+                              <Insets left="-25.0" top="75.0" />
+                           </HBox.margin>
+                           <padding>
+                              <Insets right="-20.0" top="-5.0" />
+                           </padding>
+                        </Hyperlink>
+                        <Hyperlink fx:id="ARCH1" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" onMouseClicked="#handleView" onMouseEntered="#handleOver" onMouseExited="#handleOut" prefHeight="34.0" prefWidth="22.0" text="📌" textFill="RED">
+                           <font>
+                              <Font name="Copperplate" size="36.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <HBox.margin>
+                              <Insets left="-70.0" top="130.0" />
+                           </HBox.margin>
+                           <padding>
+                              <Insets right="-20.0" top="-5.0" />
+                           </padding>
+                        </Hyperlink>
+                        <Hyperlink fx:id="ARCH2" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" onMouseClicked="#handleView" onMouseEntered="#handleOver" onMouseExited="#handleOut" prefHeight="34.0" prefWidth="22.0" text="📌" textFill="RED">
+                           <font>
+                              <Font name="Copperplate" size="36.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <HBox.margin>
+                              <Insets left="18.0" top="130.0" />
+                           </HBox.margin>
+                           <padding>
+                              <Insets right="-20.0" top="-5.0" />
+                           </padding>
+                        </Hyperlink>
+                        <Hyperlink fx:id="CULC1" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" onMouseClicked="#handleView" onMouseEntered="#handleOver" onMouseExited="#handleOut" prefHeight="34.0" prefWidth="22.0" text="📌" textFill="RED">
+                           <font>
+                              <Font name="Copperplate" size="36.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <padding>
+                              <Insets right="-20.0" top="-5.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets left="-65.0" top="190.0" />
+                           </HBox.margin>
+                        </Hyperlink>
+                        <Hyperlink fx:id="CULC2" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" onMouseClicked="#handleView" onMouseEntered="#handleOver" onMouseExited="#handleOut" prefHeight="12.0" prefWidth="22.0" text="📌" textFill="RED">
+                           <font>
+                              <Font name="Copperplate" size="36.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <padding>
+                              <Insets right="-20.0" top="-10.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets left="-35.0" top="220.0" />
+                           </HBox.margin>
+                        </Hyperlink>
+                        <Hyperlink fx:id="PRICE1" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" onMouseClicked="#handleView" onMouseEntered="#handleOver" onMouseExited="#handleOut" prefHeight="1.0" prefWidth="22.0" text="📌" textFill="RED">
+                           <font>
+                              <Font name="Copperplate" size="36.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <padding>
+                              <Insets right="-20.0" top="-10.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets left="8.0" top="235.0" />
+                           </HBox.margin>
+                        </Hyperlink>
+                        <Hyperlink fx:id="PRICE2" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" onMouseClicked="#handleView" onMouseEntered="#handleOver" onMouseExited="#handleOut" prefHeight="34.0" prefWidth="22.0" text="📌" textFill="RED">
+                           <font>
+                              <Font name="Copperplate" size="36.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <padding>
+                              <Insets right="-20.0" top="-10.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets left="-5.0" top="240.0" />
+                           </HBox.margin>
+                        </Hyperlink>
+                        <Hyperlink fx:id="CROSSLAND1" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" onMouseClicked="#handleView" onMouseEntered="#handleOver" onMouseExited="#handleOut" prefHeight="34.0" prefWidth="22.0" text="📌" textFill="RED">
+                           <font>
+                              <Font name="Copperplate" size="36.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <padding>
+                              <Insets right="-20.0" top="-5.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets top="245.0" />
+                           </HBox.margin>
+                        </Hyperlink>
+                        <Hyperlink fx:id="SKILES1" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" onMouseClicked="#handleView" onMouseEntered="#handleOver" onMouseExited="#handleOut" prefHeight="20.0" prefWidth="22.0" text="📌" textFill="RED">
+                           <font>
+                              <Font name="Copperplate" size="36.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <padding>
+                              <Insets right="-20.0" top="-10.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets left="-90.0" top="273.0" />
+                           </HBox.margin>
+                        </Hyperlink>
+                        <Hyperlink fx:id="SKILES2" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" onMouseClicked="#handleView" onMouseEntered="#handleOver" onMouseExited="#handleOut" prefHeight="34.0" prefWidth="22.0" text="📌" textFill="RED">
+                           <font>
+                              <Font name="Copperplate" size="36.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <padding>
+                              <Insets right="-20.0" top="-10.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets left="10.0" top="290.0" />
+                           </HBox.margin>
+                        </Hyperlink>
+                        <Hyperlink fx:id="TECHTOWER1" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" onMouseClicked="#handleView" onMouseEntered="#handleOver" onMouseExited="#handleOut" prefHeight="34.0" prefWidth="22.0" text="📌" textFill="RED">
+                           <font>
+                              <Font name="Copperplate" size="36.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <padding>
+                              <Insets right="-20.0" top="-5.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets left="40.0" top="340.0" />
+                           </HBox.margin>
+                        </Hyperlink>
+                        <Hyperlink fx:id="BILLMOORE1" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" onMouseClicked="#handleView" onMouseEntered="#handleOver" onMouseExited="#handleOut" prefHeight="34.0" prefWidth="22.0" text="📌" textFill="RED">
+                           <font>
+                              <Font name="Copperplate" size="36.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <padding>
+                              <Insets right="-20.0" top="-5.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets left="15.0" top="330.0" />
+                           </HBox.margin>
+                        </Hyperlink>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </center>
+         <bottom>
+            <VBox prefHeight="66.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox prefHeight="21.0" prefWidth="790.0">
+                     <children>
+                        <Label prefHeight="19.0" prefWidth="101.0" text="Filter Events:">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="39.0" prefWidth="800.0">
+                     <children>
+                        <Label text="Date:">
+                           <HBox.margin>
+                              <Insets left="10.0" top="10.0" />
+                           </HBox.margin>
+                        </Label>
+                        <DatePicker fx:id="sDate" prefHeight="29.0" prefWidth="137.0">
+                           <HBox.margin>
+                              <Insets left="5.0" top="5.0" />
+                           </HBox.margin>
+                        </DatePicker>
+                        <Label text="Location: ">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="15.0" top="10.0" />
+                           </HBox.margin>
+                        </Label>
+                        <ComboBox fx:id="loc2" prefHeight="25.0" prefWidth="122.0">
+                           <HBox.margin>
+                              <Insets top="5.0" />
+                           </HBox.margin>
+                        </ComboBox>
+                        <Label text="Host:">
+                           <HBox.margin>
+                              <Insets left="15.0" top="10.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="host" prefHeight="25.0" prefWidth="138.0">
+                           <HBox.margin>
+                              <Insets left="5.0" top="5.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <Button mnemonicParsing="false" onMouseClicked="#filterEvents" prefHeight="26.0" prefWidth="90.0" text="FILTER">
+                           <HBox.margin>
+                              <Insets left="50.0" top="5.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" onMouseClicked="#handleClear" prefHeight="26.0" prefWidth="75.0" text="CLEAR">
+                           <HBox.margin>
+                              <Insets left="10.0" top="5.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+               <BorderPane.margin>
+                  <Insets top="5.0" />
+               </BorderPane.margin>
+            </VBox>
+         </bottom>
+         <right>
+            <ImageView fitHeight="425.0" fitWidth="171.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+               <image>
+                  <Image backgroundLoading="true" url="@mapKey.png" />
+               </image>
+               <BorderPane.margin>
+                  <Insets top="25.0" />
+               </BorderPane.margin>
+            </ImageView>
+         </right>
+      </BorderPane>
+   </children>
+</AnchorPane>

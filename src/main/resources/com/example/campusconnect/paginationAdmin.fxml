@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.campusconnect.SeeEventsAdmin">
+    <children>
+        <BorderPane prefHeight="400.0" prefWidth="600.0">
+            <top>
+                <HBox prefHeight="64.0" prefWidth="600.0" style="-fx-background-color: #7E54D9;" BorderPane.alignment="CENTER">
+                    <children>
+                        <Label alignment="CENTER" prefHeight="64.0" prefWidth="306.0" text="Campus Connect" textFill="WHITE">
+                            <font>
+                                <Font size="36.0" />
+                            </font>
+                        </Label>
+                        <Button id="logOutButton" mnemonicParsing="false" onMouseClicked="#handleMap" style="-fx-background-color: #7E54D9 #7E54D9;" text="Map" textFill="WHITE">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets left="150.0" top="25.0" />
+                            </HBox.margin>
+                        </Button>
+                  <Button id="logOutButton" mnemonicParsing="false" onMouseClicked="#handleLogoff" style="-fx-background-color: #7E54D9 #7E54D9;" text="Log Out" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="5.0" top="25.0" />
+                     </HBox.margin>
+                  </Button>
+                    </children>
+                </HBox>
+            </top>
+            <center>
+                <VBox fillWidth="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="336.0" prefWidth="376.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <HBox prefHeight="86.0" prefWidth="378.0">
+                            <children>
+                                <Label text="Events Home">
+                                    <font>
+                                        <Font size="24.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </HBox>
+                  <Pagination fx:id="pagination" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="222.0" prefWidth="364.0">
+                     <VBox.margin>
+                        <Insets left="5.0" />
+                     </VBox.margin>
+                  </Pagination>
+                    </children>
+                </VBox>
+            </center>
+            <left>
+                <VBox prefHeight="336.0" prefWidth="184.0" style="-fx-background-color: #EAEAEA #EAEAEA;" BorderPane.alignment="CENTER">
+                    <children>
+                        <Label text="Filter Events:">
+                            <VBox.margin>
+                                <Insets left="10.0" top="10.0" />
+                            </VBox.margin>
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <HBox prefHeight="35.0" prefWidth="184.0">
+                            <children>
+                                <Label text="Date:">
+                                    <HBox.margin>
+                                        <Insets left="5.0" top="15.0" />
+                                    </HBox.margin>
+                                </Label>
+                                <DatePicker fx:id="sDate" prefHeight="29.0" prefWidth="137.0">
+                                    <HBox.margin>
+                                        <Insets left="5.0" top="10.0" />
+                                    </HBox.margin>
+                                </DatePicker>
+                            </children>
+                        </HBox>
+                        <HBox prefHeight="33.0" prefWidth="184.0">
+                            <children>
+                                <Label text="Location: ">
+                                    <font>
+                                        <Font size="12.0" />
+                                    </font>
+                                    <HBox.margin>
+                                        <Insets left="5.0" top="10.0" />
+                                    </HBox.margin>
+                                </Label>
+                                <ComboBox fx:id="loc2" prefHeight="25.0" prefWidth="122.0">
+                                    <HBox.margin>
+                                        <Insets top="5.0" />
+                                    </HBox.margin>
+                                </ComboBox>
+                            </children>
+                        </HBox>
+                        <HBox prefHeight="31.0" prefWidth="184.0">
+                            <children>
+                                <Label text="Host:">
+                                    <HBox.margin>
+                                        <Insets left="5.0" top="7.0" />
+                                    </HBox.margin>
+                                </Label>
+                                <TextField fx:id="host" prefHeight="25.0" prefWidth="138.0">
+                                    <HBox.margin>
+                                        <Insets left="5.0" top="3.0" />
+                                    </HBox.margin>
+                                </TextField>
+                            </children>
+                        </HBox>
+                        <HBox prefHeight="34.0" prefWidth="184.0">
+                            <children>
+                                <Button mnemonicParsing="false" onMouseClicked="#filterEvents" prefHeight="25.0" prefWidth="75.0" text="FILTER">
+                                    <HBox.margin>
+                                        <Insets left="10.0" top="5.0" />
+                                    </HBox.margin>
+                                </Button>
+                                <Button mnemonicParsing="false" onMouseClicked="#handleClear" prefHeight="25.0" prefWidth="71.0" text="CLEAR">
+                                    <HBox.margin>
+                                        <Insets left="10.0" top="5.0" />
+                                    </HBox.margin>
+                                </Button>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+            </left>
+        </BorderPane>
+    </children>
+</AnchorPane>

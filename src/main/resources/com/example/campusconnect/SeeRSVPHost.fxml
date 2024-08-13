@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.campusconnect.SeeRSVPHost">
+    <children>
+        <BorderPane prefHeight="400.0" prefWidth="600.0">
+            <top>
+                <HBox prefHeight="64.0" prefWidth="600.0" style="-fx-background-color: #7E54D9;" BorderPane.alignment="CENTER">
+                    <children>
+                        <Label alignment="CENTER" prefHeight="64.0" prefWidth="306.0" text="Campus Connect" textFill="WHITE">
+                            <font>
+                                <Font size="36.0" />
+                            </font>
+                        </Label>
+                  <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#handleBack" style="-fx-background-color: #7E54D9 #7E54D9;" text="Back" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets left="160.0" top="25.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                        <Button id="logOutButton" mnemonicParsing="false" onMouseClicked="#handleLogoff" style="-fx-background-color: #7E54D9 #7E54D9;" text="Log Out" textFill="WHITE">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets left="10.0" top="25.0" />
+                            </HBox.margin>
+                        </Button>
+                    </children>
+                </HBox>
+            </top>
+            <center>
+                <VBox fillWidth="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="336.0" prefWidth="496.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Label text="Manage RSVPs">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets top="10.0" />
+                            </VBox.margin>
+                        </Label>
+                  <Label text="Showing users that:">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                        <HBox prefHeight="26.0" prefWidth="494.0">
+                            <VBox.margin>
+                                <Insets top="5.0" />
+                            </VBox.margin>
+                     <children>
+                        <RadioButton fx:id="yes" mnemonicParsing="false" prefHeight="18.0" prefWidth="95.0" text="Will attend">
+                           <HBox.margin>
+                              <Insets top="5.0" />
+                           </HBox.margin></RadioButton>
+                        <RadioButton fx:id="maybe" mnemonicParsing="false" prefHeight="18.0" prefWidth="111.0" text="Might attend">
+                           <HBox.margin>
+                              <Insets left="5.0" top="5.0" />
+                           </HBox.margin>
+                        </RadioButton>
+                        <RadioButton fx:id="no" mnemonicParsing="false" prefHeight="18.0" prefWidth="101.0" text="Wont Attend">
+                           <HBox.margin>
+                              <Insets left="5.0" top="5.0" />
+                           </HBox.margin></RadioButton>
+                        <RadioButton fx:id="ihateu" mnemonicParsing="false" prefHeight="18.0" prefWidth="105.0" text="Archnemesis">
+                           <HBox.margin>
+                              <Insets left="5.0" top="5.0" />
+                           </HBox.margin>
+                        </RadioButton>
+                        <Button mnemonicParsing="false" onMouseClicked="#searchRSVP" text="Search" />
+                     </children>
+                        </HBox>
+                        <TableView id="seeTableAdmin" fx:id="rsvpTable" prefHeight="162.0" prefWidth="373.0">
+                            <columns>
+                        <TableColumn fx:id="nameCheck" minWidth="30.0" prefWidth="30.0" />
+                                <TableColumn id="eventColumnAdmin" fx:id="name" maxWidth="360.0" minWidth="360.0" prefWidth="360.0" text="Name" />
+                            </columns>
+                            <VBox.margin>
+                                <Insets left="40.0" top="10.0" />
+                            </VBox.margin>
+                        </TableView>
+                  <Button mnemonicParsing="false" onMouseClicked="#deleteRsvp" text="Remove Selected RSVPs">
+                     <VBox.margin>
+                        <Insets left="140.0" top="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Hyperlink onMouseClicked="#handleInvite" text="Invite Attendees">
+                     <VBox.margin>
+                        <Insets left="170.0" />
+                     </VBox.margin>
+                  </Hyperlink>
+                    </children>
+                </VBox>
+            </center>
+        </BorderPane>
+    </children>
+</AnchorPane>
