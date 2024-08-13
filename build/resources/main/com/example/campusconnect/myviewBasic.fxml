@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.campusconnect.MyviewBasic">
+    <children>
+        <BorderPane prefHeight="400.0" prefWidth="600.0">
+            <top>
+                <HBox prefHeight="64.0" prefWidth="600.0" style="-fx-background-color: #7E54D9;" BorderPane.alignment="CENTER">
+                    <children>
+                        <Label alignment="CENTER" prefHeight="64.0" prefWidth="306.0" text="Campus Connect" textFill="WHITE">
+                            <font>
+                                <Font size="36.0" />
+                            </font>
+                        </Label>
+                        <Button id="backButton" mnemonicParsing="false" onMousePressed="#handleBackfromMyView" style="-fx-background-color: #7E54D9 #7E54D9;" text="Back" textFill="WHITE">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets left="160.0" top="25.0" />
+                            </HBox.margin>
+                        </Button>
+                        <Button id="logOutButton" mnemonicParsing="false" onMousePressed="#handleLogoff" style="-fx-background-color: #7E54D9 #7E54D9;" text="Log Out" textFill="WHITE">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets top="25.0" />
+                            </HBox.margin>
+                        </Button>
+                    </children>
+                </HBox>
+            </top>
+            <center>
+                <VBox fillWidth="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="336.0" prefWidth="418.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Text id="mvbTitle" fx:id="title" strokeType="OUTSIDE" strokeWidth="0.0" text="Title" wrappingWidth="222.21337890625">
+                            <VBox.margin>
+                                <Insets left="100.0" top="40.0" />
+                            </VBox.margin>
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                        </Text>
+                        <Text id="mvbLocation" fx:id="loc" strokeType="OUTSIDE" strokeWidth="0.0" text="Location" wrappingWidth="222.21337890625">
+                            <VBox.margin>
+                                <Insets left="100.0" top="10.0" />
+                            </VBox.margin>
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Text>
+                        <Text id="mvbTime" fx:id="time" strokeType="OUTSIDE" strokeWidth="0.0" text="Time" wrappingWidth="222.21337890625">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets left="100.0" top="10.0" />
+                            </VBox.margin>
+                        </Text>
+                        <TextFlow id="mvbDescription" fx:id="descript" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="120.0" prefWidth="208.0">
+                            <VBox.margin>
+                                <Insets left="100.0" top="10.0" />
+                            </VBox.margin>
+                        </TextFlow>
+                  <HBox prefHeight="33.0" prefWidth="289.0">
+                     <children>
+                              <Hyperlink id="mvbEditLink" onMousePressed="#handleEditEvent" text="Edit Event" />
+                        <Hyperlink id="mvbDeleteLink" onMousePressed="#handleDeleteEvent" text="Delete Event">
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </Hyperlink>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="100.0" top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                    </children>
+                </VBox>
+            </center>
+            <right>
+                <VBox prefHeight="73.0" prefWidth="179.0" style="-fx-background-color: #EAEAEA;" BorderPane.alignment="CENTER">
+                    <children>
+                        <Label text="Event Capacity Info:">
+                            <VBox.margin>
+                                <Insets left="10.0" top="40.0" />
+                            </VBox.margin>
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Label>
+                        <VBox prefHeight="85.0" prefWidth="179.0">
+                            <children>
+                                <HBox prefHeight="46.0" prefWidth="179.0">
+                                    <children>
+                                        <Label text="Current Attendees: ">
+                                            <HBox.margin>
+                                                <Insets top="10.0" />
+                                            </HBox.margin>
+                                        </Label>
+                                        <Text fx:id="attend" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+                                            <HBox.margin>
+                                                <Insets left="10.0" top="10.0" />
+                                            </HBox.margin>
+                                        </Text>
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets left="10.0" />
+                                    </VBox.margin>
+                                </HBox>
+                                <HBox prefHeight="29.0" prefWidth="169.0">
+                                    <children>
+                                        <Label text="Max Capacity:" />
+                                        <Text fx:id="max" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+                                            <HBox.margin>
+                                                <Insets left="10.0" />
+                                            </HBox.margin>
+                                        </Text>
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets left="10.0" />
+                                    </VBox.margin>
+                                </HBox>
+                                <Text fx:id="in" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+                                    <VBox.margin>
+                                        <Insets left="10.0" top="5.0" />
+                                    </VBox.margin>
+                                </Text>
+                            </children>
+                        </VBox>
+                        <Hyperlink onMouseClicked="#handleRSVP" text="Manage RSVPs">
+                            <VBox.margin>
+                                <Insets left="10.0" top="119.0" />
+                            </VBox.margin>
+                        </Hyperlink>
+                    </children>
+                </VBox>
+            </right>
+        </BorderPane>
+    </children>
+</AnchorPane>

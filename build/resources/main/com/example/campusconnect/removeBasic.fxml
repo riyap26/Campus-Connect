@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.campusconnect.RemoveBasic">
+    <children>
+        <BorderPane prefHeight="400.0" prefWidth="600.0">
+            <top>
+                <HBox prefHeight="64.0" prefWidth="600.0" style="-fx-background-color: #7E54D9;" BorderPane.alignment="CENTER">
+                    <children>
+                        <Label alignment="CENTER" prefHeight="64.0" prefWidth="306.0" text="Campus Connect" textFill="WHITE">
+                            <font>
+                                <Font size="36.0" />
+                            </font>
+                        </Label>
+                        <Button id="backButton" mnemonicParsing="false" onMouseClicked="#handleBackfromDelete" style="-fx-background-color: #7E54D9 #7E54D9;" text="Back" textFill="WHITE">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets left="160.0" top="25.0" />
+                            </HBox.margin>
+                        </Button>
+                        <Button id="logOutButton" mnemonicParsing="false" onMouseClicked="#handleLogoff" style="-fx-background-color: #7E54D9 #7E54D9;" text="Log Out" textFill="WHITE">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets top="25.0" />
+                            </HBox.margin>
+                        </Button>
+                    </children>
+                </HBox>
+            </top>
+            <center>
+                <VBox fillWidth="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="336.0" prefWidth="418.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Label text="Delete Event">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets left="100.0" top="25.0" />
+                            </VBox.margin>
+                        </Label>
+                  <Text id="rbTitle" fx:id="title" strokeType="OUTSIDE" strokeWidth="0.0" text="Title" wrappingWidth="222.21337890625">
+                     <VBox.margin>
+                        <Insets left="100.0" top="10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text id="rbLocation" fx:id="loc" strokeType="OUTSIDE" strokeWidth="0.0" text="Location" wrappingWidth="222.21337890625">
+                     <VBox.margin>
+                        <Insets left="100.0" top="10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text id="rbTime" fx:id="time" strokeType="OUTSIDE" strokeWidth="0.0" text="Time" wrappingWidth="222.21337890625">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="100.0" top="10.0" />
+                     </VBox.margin>
+                  </Text>
+                  <TextFlow id="rbDescription" fx:id="descript" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="95.0" prefWidth="208.0">
+                     <VBox.margin>
+                        <Insets left="100.0" top="10.0" />
+                     </VBox.margin>
+                  </TextFlow>
+                        <Button id="deleteButtonBasic" mnemonicParsing="false" onMouseClicked="#handleDelete" style="-fx-background-color: #5E10BC;" text="Delete Event" textFill="WHITE">
+                            <VBox.margin>
+                                <Insets left="150.0" top="15.0" />
+                            </VBox.margin>
+                            <font>
+                                <Font name="System Bold" size="13.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </VBox>
+            </center>
+        </BorderPane>
+    </children>
+</AnchorPane>
